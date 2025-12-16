@@ -1,11 +1,11 @@
 # MSI Titan 18 HX RGB Startup Fix
 Driver-based fix for MSI Titan 18 HX Dragon Edition Norse Myth: keyboard RGB not lighting at boot / lock screen (or staying off until SteelSeries loads).
 
-## MSI Titan 18 HX Dragon Edition Norse Myth (A2XWJG-429CA)
+## MSI Titan 18 HX Dragon Edition Norse Myth (`A2XWJG-429CA`)
 ### Fix: Keyboard RGB OFF until Windows/SteelSeries loads + Brightness “Offset” behavior
 
 **Author:** Lily (original discovery + fix)  
-**Model tested:** MSI Titan 18 HX Dragon Edition Norse Myth **A2XWJG-429CA**  
+**Model tested:** MSI Titan 18 HX Dragon Edition Norse Myth `A2XWJG-429CA`  
 **OS:** Windows 11 Pro  
 **Date:** 2025-12-15
 
@@ -21,20 +21,20 @@ Driver-based fix for MSI Titan 18 HX Dragon Edition Norse Myth: keyboard RGB not
 - BIOS-only changes alone
 
 ### The fix that worked
-> Note: This is confirmed on A2XWJG-429CA. It may also help other MSI Titan 18 HX / A2XW variants with similar symptoms, but results may vary by BIOS/EC and driver versions.
+> Note: This is confirmed on `A2XWJG-429CA`. It may also help other MSI Titan 18 HX / A2XW variants with similar symptoms, but results may vary by BIOS/EC and driver versions.
 
 Reinstalling these drivers from MSI’s support page for the exact model:
 
 1) **Intel HID Event Filter driver**
-- Version: **2.2.2.12**
-- Release date: **2025-02-12**
-- File size: **0.10 MB**
+- Version: `2.2.2.12`
+- Release date: `2025-02-12`
+- File size: `0.10 MB`
 - SHA-256: `72e83d108f72c77393d6fdc64785975ae75c3451784547ffce5bbd8e48d569a2`
 
 2) **Intel Serial IO driver**
-- Version: **30.100.2419.23**
-- Release date: **2025-05-09**
-- File size: **2.96 MB**
+- Version: `30.100.2419.23`
+- Release date: `2025-05-09`
+- File size: `2.96 MB`
 - SHA-256: `953353ad796454e3e7a2e20766b43523cd9459825bd90562c1ae9e7ff97af322`
 
 After reinstalling those drivers:
@@ -43,10 +43,10 @@ After reinstalling those drivers:
 - Brightness behavior returned to normal / usable
 
 ### Steps (exact)
-1. Download the drivers from MSI for **A2XWJG-429CA**
-2. Install **Intel HID Event Filter**
+1. Download the drivers from MSI for `A2XWJG-429CA`
+2. Install `Intel HID Event Filter`
 3. Reboot
-4. Install **Intel Serial IO**
+4. Install `Intel Serial IO`
 5. Reboot
 6. Confirm keyboard RGB lights during boot / at lock screen
 
@@ -55,7 +55,7 @@ This appears to be an HID / event pipeline initialization issue: keyboard lighti
 
 ### Safety / best practice
 - Create a **System Restore Point** before experimenting further.
-- If newer versions exist, try the latest first. If that doesn’t work, these known-good versions are confirmed to fix the issue on A2XWJG-429CA.
+- If newer versions exist, try the latest first. If that doesn’t work, these known-good versions are confirmed to fix the issue on `A2XWJG-429CA`.
 - I’m not redistributing any MSI/Intel files here. Download drivers only from official MSI sources.
 
 **Keywords:** MSI Titan 18 HX, Norse Myth, A2XWJG, keyboard RGB, SteelSeries GG, Intel Serial IO, HID Event Filter, backlight off at boot
